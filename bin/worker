@@ -1,0 +1,6 @@
+#!/bin/bash
+flask rq scheduler &
+flask rq worker --sentry-dsn $SENTRY_DSN --logging_level=INFO high &
+flask rq worker --sentry-dsn $SENTRY_DSN --logging_level=INFO default &
+flask rq worker --sentry-dsn $SENTRY_DSN --logging_level=INFO scheduled low &
+flask rq worker --sentry-dsn $SENTRY_DSN --logging_level=INFO cron

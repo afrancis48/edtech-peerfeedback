@@ -1,0 +1,48 @@
+
+{% extends "layout.html" %}
+{% block content %}
+<div class="section section-hero bg-gray">
+    <div id="overview" class="grid-hero container grid-lg text-center">
+        <h1>Peer Feedback</h1>
+        <h2>We make grading papers for large classrooms easy</h2>
+        <p>
+            <router-link class="btn btn-primary btn-lg"
+                         :to="{ name: 'dashboard' }" exact> Get Started
+            </router-link>
+        </p>
+        <div class="columns">
+            <div class="column col-4 col-xs-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <span class="card-title">Save Time</span>
+                    </div>
+                    <div class="card-body">
+                        Less time grading papers lets you focus on teaching
+                    </div>
+                </div>
+            </div>
+            <div class="column col-4 col-xs-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <span class="card-title">Become Organized</span>
+                    </div>
+                    <div class="card-body">
+                        Keep track of all your students' papers in one place
+                    </div>
+                </div>
+            </div>
+            <div class="column col-4 col-xs-12">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <span class="card-title">Get Support</span>
+                    </div>
+                    <div class="card-body">
+                        Receive help setting up and running your class
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,26 @@
+{% extends 'admin/master.html' %}
+
+{% block body %}
+  <form method="POST" class="login-form" id="admin-login-form">
+    {{ form.csrf_token }}
+    <div class="form-group">
+      {{ form.username.label(class="form-label") }}
+      {{ form.username(class="form-control") }}
+    </div>
+    <div class="form-group">
+      {{ form.password.label(class="form-label") }}
+      {{ form.password(class="form-control") }}
+    </div>
+
+    <input type="submit" class="btn btn-primary btn-block" value="Login">
+  </form>
+
+  <style>
+    .login-form {
+      max-width: 330px;
+      padding: 15px;
+      margin: 0 auto;
+      box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.2);
+    }
+  </style>
+{% endblock %}

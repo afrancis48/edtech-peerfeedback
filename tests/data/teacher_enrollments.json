@@ -1,0 +1,39 @@
+[
+    {
+        "id": 1,
+        "user_id": 1,
+        "course_id": 1,
+        "type": "TeacherEnrollment",
+        "created_at": "2018-10-25T06:03:01Z",
+        "updated_at": "2018-10-25T06:03:01Z",
+        "associated_user_id": null,
+        "start_at": null,
+        "end_at": null,
+        "course_section_id": 1,
+        "root_account_id": 1,
+        "limit_privileges_to_course_section": false,
+        "enrollment_state": "active",
+        "role": "TeacherEnrollment",
+        "role_id": 4,
+        "last_activity_at": "2018-10-25T06:03:03Z",
+        "total_activity_time": 0,
+        "sis_import_id": null,
+        "sis_account_id": null,
+        "sis_course_id": null,
+        "course_integration_id": null,
+        "sis_section_id": null,
+        "section_integration_id": null,
+        "sis_user_id": null,
+        "html_url": "http://canvas:3000/courses/1/users/1",
+        "user": {
+            "id": 1,
+            "name": "canvas@example.edu",
+            "sortable_name": "canvas@example.edu",
+            "short_name": "canvas@example.edu",
+            "sis_user_id": null,
+            "integration_id": null,
+            "sis_import_id": null,
+            "login_id": "canvas@example.edu"
+        }
+    }
+]

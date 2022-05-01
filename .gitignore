@@ -1,0 +1,69 @@
+*.py[cod]
+
+# C extensions
+*.so
+
+# Packages
+*.egg
+*.egg-info
+build
+eggs
+parts
+var
+sdist
+develop-eggs
+.installed.cfg
+lib
+lib64
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+nosetests.xml
+
+# Translations
+*.mo
+
+# Mr Developer
+.mr.developer.cfg
+.project
+.pydevproject
+.devcontainer
+
+# Complexity
+output/*.html
+output/*/index.html
+
+# Sphinx
+docs/_build
+
+.webassets-cache
+
+# Virtualenvs
+env/
+
+# npm
+/node_modules/
+
+# static build output files
+/peerfeedback/static/*
+
+# Environment variables
+.env
+
+# PyCharm folder
+.idea/
+
+# VS Code
+.vscode
+
+# db folder created when running docker
+db/
+
+# Pytest Cache
+.pytest_cache
+
+venv/

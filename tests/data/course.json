@@ -1,0 +1,37 @@
+{
+    "id": 1,
+    "name": "Demo Math 101",
+    "account_id": 1,
+    "uuid": "Nd4mojehIpPMUpE3QJ9matjlAYPTml7AwgOwpg98",
+    "start_at": "2018-10-25T06:03:01Z",
+    "grading_standard_id": null,
+    "is_public": null,
+    "course_code": "Demo 101",
+    "default_view": "assignments",
+    "root_account_id": 1,
+    "enrollment_term_id": 1,
+    "end_at": null,
+    "public_syllabus": false,
+    "public_syllabus_to_auth": false,
+    "storage_quota_mb": 500,
+    "is_public_to_auth_users": false,
+    "hide_final_grades": false,
+    "apply_assignment_group_weights": false,
+    "calendar": {
+        "ics": "http://canvas:3000/feeds/calendars/course_Nd4mojehIpPMUpE3QJ9matjlAYPTml7AwgOwpg98.ics"
+    },
+    "time_zone": "America/Denver",
+    "sis_course_id": null,
+    "integration_id": null,
+    "enrollments": [
+        {
+            "type": "teacher",
+            "role": "TeacherEnrollment",
+            "role_id": 4,
+            "user_id": 1,
+            "enrollment_state": "active"
+        }
+    ],
+    "workflow_state": "available",
+    "restrict_enrollments_to_course_dates": false
+}

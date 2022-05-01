@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block page_title %}Server error{% endblock %}
+
+{% block content %}
+  <section style="padding-top: 10vh;">
+    <div class="empty">
+      <div class="empty-icon">
+        <i class="icon icon-stop"></i>
+      </div>
+      <p class="empty-title h3">500 Internal Server Error</p>
+      <p class="empty-subtitle">
+        Sorry, something went wrong on our system. Don't panic, we are fixing
+        it! Please try again later.
+      </p>
+      <div class="empty-action">
+        <a href="/" class="btn btn-primary">Return Home</a>
+      </div>
+    </div>
+    <div>
+      <!-- Sentry JS SDK 2.1.+ required -->
+      <script src="https://cdn.ravenjs.com/2.3.0/raven.min.js"></script>
+
+      {% if event_id %}
+        <script>
+          Raven.showReportDialog({
+            eventId: '{{ event_id }}',
+            dsn: '{{ public_dsn }}',
+          })
+        </script>
+      {% endif %}
+    </div>
+  </section>
+
+{% endblock %}
+

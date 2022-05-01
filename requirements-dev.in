@@ -1,0 +1,30 @@
+## Everything needed for testing and development
+
+-r requirements.in
+
+# Debug
+Flask-DebugToolbar
+wdb
+flask-wdb-hook
+
+# Dependency management
+pip-tools
+pipdeptree
+wheel
+
+# Demo Data Generation
+Faker
+
+# Testing
+pytest
+pytest-cov
+factory-boy
+python-dotenv
+
+# Lint and code style
+black
+flake8
+flake8-black
+
+# Autocomplate
+jedi

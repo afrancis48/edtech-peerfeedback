@@ -1,0 +1,21 @@
+FROM python:3.7-slim
+# slim=debian-based. Not using alpine because it has poor python3 support.
+
+# Install Yarn and Vim
+RUN apt-get update && apt-get install -y vim gcc python3-dev libpq-dev git
+
+# Install Python dependencies
+COPY requirements-dev.txt /tmp/
+RUN pip install -r /tmp/requirements-dev.txt
+
+# Add our code
+ADD ./ /opt/
+WORKDIR /opt/
+
+# Run the image as a non-root user
+RUN adduser --disabled-password --gecos "" myuser
+USER myuser
+
+# Run the app.  CMD is required to run on Heroku
+# $PORT is set by Heroku
+CMD gunicorn autoapp:app --config='gunicorn_config.py' -b 0.0.0.0:$PORT -w 3

@@ -1,0 +1,22 @@
+study: 1
+students:
+  - student0001@example.edu
+  - student0010@example.edu
+  - student0011@example.edu
+  - student0012@example.edu
+  - student0013@example.edu
+  - student0014@example.edu
+  - student0015@example.edu
+  - student0016@example.edu
+  - student0017@example.edu
+  - student0018@example.edu
+  - student0019@example.edu
+  - student0021@example.edu
+  - student0031@example.edu
+  - student0041@example.edu
+  - student0051@example.edu
+  - student0061@example.edu
+  - student0071@example.edu
+assignments:
+  - 2
+  - 3

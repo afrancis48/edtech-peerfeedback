@@ -1,0 +1,51 @@
+## Everything needed for production
+
+# Auth
+Authlib[client]
+flask-jwt-extended
+cas_client
+Flask-SSLify
+
+# Caching
+Flask-Caching
+
+# Debug
+flask-debugtoolbar
+
+# Commands
+Faker
+
+# Canvas Integration
+canvasapi
+
+# Database
+Flask-Migrate
+psycopg2-binary
+
+# Background Tasks
+Flask-RQ2
+
+# Deployment
+gunicorn
+
+# Error Reporting - Sentry
+sentry-sdk[flask]
+
+# Email
+sendgrid
+beautifulsoup4
+email_reply_parser
+
+# Serving JSON API
+flask-restful
+flask-marshmallow
+marshmallow-sqlalchemy
+
+# Admin
+Flask-Admin
+Flask-Login
+Flask-WTF
+pyyaml
+
+# File storage
+boto3

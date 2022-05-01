@@ -1,0 +1,9 @@
+{
+  "scripts": {
+    "postinstall": "cd frontend && yarn install --frozen-lockfile --production=false && yarn build"
+  },
+  "cacheDirectories": ["frontend/node_modules"],
+  "engines": {
+    "yarn": "1.13.x"
+  }
+}

@@ -1,0 +1,59 @@
+stages:
+  - test
+  - deploy
+  - verify
+
+frontend_test:
+ image: node:10
+ stage: test
+ script:
+   - cd frontend && yarn install
+   - yarn test:unit
+
+backend_test:
+  image: "python:3.7"
+  stage: test
+  services:
+  - postgres:latest
+  - redis:latest
+  variables:
+    POSTGRES_DB: testdb
+    POSTGRES_USER: tester
+    POSTGRES_PASSWORD: password
+    DATABASE_URL: postgres://tester:password@postgres:5432/testdb
+    REDIS_URL: redis://redis:6379
+    CANVAS_API_URL: http://canvas:3000/api/v1/
+    CANVAS_BASE_URL: http://canvas:3000/
+    CANVAS_ACCESS_TOKEN_URL: http://canvas:3000/login/oauth2/token
+    CANVAS_AUTHORIZE_URL: http://canvas:3000/login/oauth2/auth
+    CANVAS_CONSUMER_KEY: 10000000000001
+    CANVAS_CONSUMER_SECRET: test_developer_key
+  before_script:
+  - apt-get update -qy
+  - apt-get install -y python3-dev python3-pip
+  - pip3 install -r requirements-dev.txt
+  script:
+  - pytest tests --cov=peerfeedback
+  coverage: '/TOTAL.+ ([0-9]{1,3}%)/'
+
+staging:
+  stage: deploy
+  script:
+  - apt-get update -qy
+  - apt-get install -y ruby-dev
+  - gem install dpl
+  - dpl --provider=heroku --app=peer-feedback-ng --api-key=$HEROKU_STAGING_API_KEY
+  only:
+  - staging
+
+e2e_tests:
+  stage: verify
+  image: circleci/node:12.4-browsers
+  before_script:
+    - export E2E_HOST=peerfeedback.io
+    - cd frontend && yarn install
+  script:
+    - yarn test:e2e-headless
+  only:
+    - staging
+

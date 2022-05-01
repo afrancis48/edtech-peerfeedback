@@ -1,0 +1,18 @@
+<div class="grid-header container grid-lg">
+  <nav class="navbar">
+    <section class="navbar-section">
+      <a href="/app/" class="navbar-brand mr-2">Peer Feedback</a>
+    </section>
+    <section class="navbar-center">
+      <!-- centered logo or brand -->
+    </section>
+    <section class="navbar-section">
+      <a class="btn btn-link" title="Help"
+         href="mailto:gabriel@peerfeedback.io?Subject=Peer Feedback">
+        ❤
+      </a>
+      <a id="login" href="#" class="btn btn-link" @click="login()"
+         v-if="!isLoggedIn">Login</a>
+    </section>
+  </nav>
+</div>

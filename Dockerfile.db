@@ -1,0 +1,7 @@
+FROM postgres:latest
+
+ENV jmdict_build_deps 'make wget python3 python3-psycopg2'
+
+RUN apt-get update && apt-get install -y ${jmdict_build_deps}
+
+WORKDIR /opt
