@@ -51,8 +51,7 @@ env/
 # static build output files
 /peerfeedback/static/*
 
-# Environment variables
-.env
+
 
 # PyCharm folder
 .idea/
@@ -60,8 +59,6 @@ env/
 # VS Code
 .vscode
 
-# db folder created when running docker
-db/
 
 # Pytest Cache
 .pytest_cache
